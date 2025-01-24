@@ -1,0 +1,99 @@
+/*detail.css*/
+
+/* 사이드바  */
+.side-bar{
+    position: fixed;
+    top:20%;
+    right: 30px;
+}
+/*사이드 바에 있는 각각의 box*/
+.side-bar .box{
+    border: 1px solid lightgray;
+    border-radius: 100%;
+    padding: 25px 30px;
+    margin-bottom: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+/* i태그도 text 처럼 font-size
+를 이용해서 조절하면 됨*/
+.side-bar i{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/*하트아이콘을 눌렀을 때 글씨 색상을 변경하는 클래스 */
+.side-bar i.liked{
+    color:red;
+}
+.side-bar p{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+/* 댓글창 css  */
+.comment-section{
+    border: 1px solid lightgray;
+    margin-top: 1rem;
+    padding: 1.5rem;
+    border-radius: 5px;
+}
+.comments{
+    display: flex;
+    margin-top: 1.5rem;
+}
+
+/* 댓글창의 입력css */
+.comment-section textarea{
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+}
+
+.comment-section span{
+    margin-right: 20px;
+}
+.comment-img{
+    margin-right: 20px;
+}
+
+.comment-img img{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+
+}
+
+
+/*  댓글창을 숨기는 클래스! */
+.hidden{
+    display: none;
+}
+/*  댓글창을 보여주는 클래스 */
+.show{
+    display: block;
+}
+
+/* 상품에 관한 css */
+
+/* 별점색상 변경
+   아이콘들은 텍스트 변경하는 것 처럼 색상이나
+   폰트 크기를 조절 할 수 있다.
+*/
+.product-info i{
+    color:hotpink;
+    font-size: 1.3rem;
+}
+
+.btn-container button{
+    width:100%;
+    margin-top: 10px;
+}
+/* 상품 이미지 영역 */
+#product-info-image {
+    width: 100%; /* 너비를 콘텐츠 영역에 맞춤 */
+    height: auto; /* 높이를 비율에 따라 자동 조정 */
+    max-height: 600px; /* 높이 최대값 제한 */
+    object-fit: contain; /* 이미지 비율을 유지하면서 콘텐츠 영역에 맞춤 */
+}
