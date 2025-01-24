@@ -27,14 +27,15 @@ public class SecurityConfig {
         // /images 현재폴더만 허용
         // /images/폴더들이 있을 경우 /images/** 해야
         // 하위 폴더들도 포함이 된다.
-        http.csrf(csrf->csrf.disable())
+        http
+                .csrf(csrf->csrf.disable())
                 .authorizeHttpRequests(auth->auth
                         .requestMatchers("/",
                                       "/css/**",
                                       "/images/**",
                                         "/product/**",
                                         "/js/**").permitAll()
-                        .anyRequest().denyAll()
+                        .anyRequest().permitAll()
                 );
 
         return http.build();
